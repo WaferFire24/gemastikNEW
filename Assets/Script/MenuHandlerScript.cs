@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuHandlerScript : MonoBehaviour
 {
+    public void sound_volume(float volume)
+    {
+        PlayerPrefs.SetFloat("volume", volume);
+    }
+
     private bool isClosed = true;
     [SerializeField]Animator anim;
 
@@ -22,6 +27,17 @@ public class MenuHandlerScript : MonoBehaviour
 
     public void quitPressed(){
         Application.Quit();
+    }
+
+    public AudioSource musik, touch; 
+
+    public Slider volume_musik, volume_effect;
+
+    void OnMouseDown()
+    {
+        touch.volume = volume_effect.value;
+
+        musik.volume = volume_musik.value;  
     }
 
     public void menuPressed(){
