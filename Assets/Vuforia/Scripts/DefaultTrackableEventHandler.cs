@@ -78,14 +78,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         {
             OnTrackingFound();
             
-            if(mTrackableBehaviour.TrackableName == "noUTurn"){
+            if(mTrackableBehaviour.TrackableName == "data"){
                 _txtNama.text = _nama[0];
                 _txtDesc.text = _desc[0];
                 PlayerPrefs.SetInt("nomorquiz",0);
-            }else if(mTrackableBehaviour.TrackableName == "verboden2"){
-                _txtNama.text = _nama[1];
-                _txtDesc.text = _desc[1];
-                PlayerPrefs.SetInt("nomorquiz",1);
             }
             _btnnya.interactable = true;
         }

@@ -33,4 +33,7 @@ public class UIHandlerScript : MonoBehaviour
     public void QuizStart(){
         SceneManager.LoadScene("MiniQuiz");
     }
+    public void QuizEnded(){
+        SceneManager.LoadScene("ScanScene");
+    }
 }

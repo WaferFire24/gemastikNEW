@@ -32,6 +32,7 @@ public class CSVParsing : MonoBehaviour
 		string[] pilB = new string[ndata];
 		string[] pilC = new string[ndata];
 		string[] pilD = new string[ndata];
+		string[] kunci = new string[ndata];
 
 		foreach (string record in records){
 			string[] fields = record.Split(fieldSeperator);
@@ -40,6 +41,7 @@ public class CSVParsing : MonoBehaviour
 			pilB[i] = fields[2];
 			pilC[i] = fields[3];
 			pilD[i] = fields[4];
+			kunci[i] = fields[5];
 			i++;
 		}
 
@@ -48,6 +50,7 @@ public class CSVParsing : MonoBehaviour
 		PlayerPrefsX.SetStringArray("PilihanB", pilB); 
         PlayerPrefsX.SetStringArray("PilihanC", pilC);
 		PlayerPrefsX.SetStringArray("PilihanD", pilD); 
+		PlayerPrefsX.SetStringArray("KunciJwbn", kunci); 
 	}
 
 	private void readRambu()
